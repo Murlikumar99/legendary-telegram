@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Live - Premium HD Streaming | Watch Live Matches</title>
+    <meta name="description" content="Watch live cricket matches in HD quality with no interruptions. Premium streaming service with real-time coverage of international cricket tournaments.">
+    <meta name="keywords" content="cricket live streaming, watch cricket online, live sports, cricket matches, HD streaming">
+    <meta name="author" content="Murli Kumar">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cricket-live-stream.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Cricket Live - Premium HD Streaming | Watch Live Matches">
+    <meta property="og:description" content="Watch live cricket matches in HD quality with no interruptions. Real-time coverage of international tournaments.">
+    <meta property="og:image" content="https://i.supaimg.com/7d56b2f0-9813-4f3f-b5e1-a6239d5bf886.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://cricket-live-stream.com">
+    <meta property="og:site_name" content="Cricket Live Streaming">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@CricketLive">
+    <meta name="twitter:creator" content="@MurliKumar">
+    <meta name="twitter:title" content="Cricket Live - Premium HD Streaming">
+    <meta name="twitter:description" content="Watch live cricket matches in HD quality with no interruptions.">
+    <meta name="twitter:image" content="https://i.supaimg.com/7d56b2f0-9813-4f3f-b5e1-a6239d5bf886.jpg">
+    <meta name="twitter:image:alt" content="Cricket Live Streaming Logo">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Cricket Live Streaming",
+      "url": "https://cricket-live-stream.com",
+      "description": "Premium live cricket streaming service with HD quality and real-time coverage",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cricket Live",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://i.supaimg.com/7d56b2f0-9813-4f3f-b5e1-a6239d5bf886.jpg"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://cricket-live-stream.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --primary-light: #93C5FD;
+            --primary-glow: 0 0 10px rgba(37, 99, 235, 0.7), 0 0 20px rgba(37, 99, 235, 0.4);
+            --secondary: #DC2626;
+            --secondary-glow: 0 0 10px rgba(220, 38, 38, 0.5);
+            --live-indicator: #DC2626;
+            --live-glow: 0 0 10px rgba(220, 38, 38, 0.7);
+            --bg-dark: #0F172A;
+            --bg-darker: #0A1128;
+            --bg-card: #1E293B;
+            --text-light: #FFFFFF;
+            --text-muted: #CBD5E1;
+            --border-light: rgba(37, 99, 235, 0.3);
+            --border-dark: rgba(37, 99, 235, 0.1);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            --radius: 16px;
+        }
+
+        .light-mode {
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --primary-light: #93C5FD;
+            --primary-glow: 0 0 10px rgba(37, 99, 235, 0.5);
+            --secondary: #DC2626;
+            --secondary-glow: 0 0 10px rgba(220, 38, 38, 0.3);
+            --live-indicator: #DC2626;
+            --bg-dark: #f0f2f5;
+            --bg-darker: #e4e6ef;
+            --bg-card: #ffffff;
+            --text-light: #1E293B;
+            --text-muted: #64748B;
+            --border-light: rgba(37, 99, 235, 0.2);
+            --border-dark: rgba(37, 99, 235, 0.1);
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            transition: background 0.3s ease, color 0.3s ease;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: var(--primary-glow);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            text-shadow: var(--primary-glow);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border-radius: var(--radius);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-icon {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            border-radius: 50%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: var(--primary-glow);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.8);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 1px solid var(--border-light);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(37, 99, 235, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            color: var(--primary);
+            text-shadow: var(--primary-glow);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .player-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background-color: var(--bg-card);
+            aspect-ratio: 16/9;
+            position: relative;
+            border: 1px solid var(--border-light);
+        }
+
+        #video-player {
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-card);
+        }
+
+        .player-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-dark) 100%);
+            color: var(--text-light);
+            font-size: 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thumbnail-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .thumbnail-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .placeholder-content {
+            text-align: center;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .play-btn {
+            padding: 16px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        /* Features Section */
+        .features {
+            margin: 60px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: var(--primary);
+            text-shadow: var(--primary-glow);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 3px solid var(--primary);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            text-shadow: var(--primary-glow);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Server Status */
+        .server-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: var(--radius);
+            background-color: rgba(37, 99, 235, 0.1);
+            font-weight: 500;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .status-dot.connected {
+            background-color: #10B981;
+            box-shadow: 0 0 8px #10B981;
+        }
+
+        .status-dot.connecting {
+            background-color: #F59E0B;
+            box-shadow: 0 0 8px #F59E0B;
+            animation: pulse 1.5s infinite;
+        }
+
+        .status-dot.error {
+            background-color: #EF4444;
+            box-shadow: 0 0 8px #EF4444;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -20px;
+            margin-left: -20px;
+            display: none;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--bg-card);
+            color: var(--text-light);
+            padding: 14px 28px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            display: none;
+            font-weight: 500;
+            border: 1px solid var(--border-light);
+        }
+
+        .toast.error {
+            background-color: rgba(244, 67, 54, 0.2);
+            border-color: rgba(244, 67, 54, 0.5);
+        }
+
+        .toast.success {
+            background-color: rgba(76, 175, 80, 0.2);
+            border-color: rgba(76, 175, 80, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 1px solid var(--border-dark);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .developer {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-actions {
+                gap: 10px;
+            }
+            
+            .feature-card {
+                padding: 20px 15px;
+            }
+            
+            .logo {
+                height: 40px;
+                width: 40px;
+            }
+            
+            .logo-text {
+                font-size: 20px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+            
+            .share-components {
+                bottom: 70px;
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-container {
+                flex-direction: column;
+                gap: 5px;
+                align-items: flex-start;
+            }
+            
+            .logo-text {
+                font-size: 18px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .share-components {
+                flex-direction: row;
+                bottom: 70px;
+                right: 50%;
+                transform: translateX(50%);
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+            
+            .share-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+            }
+        }
+
+        /* HD Quality Badge */
+        .hd-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            z-index: 5;
+        }
+
+        /* Live Badge */
+        .live-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--live-indicator);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            z-index: 5;
+            box-shadow: var(--live-glow);
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Share Components */
+        .share-components {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 100;
+        }
+
+        .share-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-card);
+            color: var(--primary);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-size: 1.2rem;
+            border: 1px solid var(--border-dark);
+        }
+
+        .share-btn:hover {
+            transform: scale(1.15);
+            box-shadow: var(--primary-glow);
+        }
+
+        .share-btn.whatsapp {
+            color: #25D366;
+        }
+
+        .share-btn.telegram {
+            color: #0088CC;
+        }
+
+        .share-btn.copy {
+            color: var(--primary);
+        }
+        
+        /* Developer Tools Warning */
+        .devtools-warning {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-darker);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+        
+        .warning-icon {
+            font-size: 4rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .devtools-warning h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--secondary);
+        }
+        
+        .devtools-warning p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            color: var(--text-light);
+        }
+
+        /* Blue theme enhancements */
+        .blue-accent {
+            color: var(--primary);
+        }
+
+        .blue-bg {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .blue-border {
+            border-color: var(--primary);
+        }
+
+        /* Watch Live Button */
+        .watch-live-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 16px 40px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--secondary) 0%, #B91C1C 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.5), 0 0 20px rgba(220, 38, 38, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .watch-live-btn:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+            box-shadow: 0 15px 30px rgba(220, 38, 38, 0.6), 0 0 25px rgba(220, 38, 38, 0.4);
+        }
+
+        .watch-live-btn i {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="devtools-warning" id="devtools-warning">
+        <div class="warning-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h2>Developer Tools Detected</h2>
+        <p>This website is protected against inspection. Please close developer tools to continue using Cricket Live Streaming.</p>
+        <button class="btn btn-primary" onclick="location.reload()">
+            <i class="fas fa-redo"></i> Reload Page
+        </button>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="https://i.supaimg.com/7d56b2f0-9813-4f3f-b5e1-a6239d5bf886.jpg" alt="Cricket Live Logo">
+                </div>
+                <div class="logo-text">Cricket Live</div>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-icon btn-secondary" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1>Live Cricket Streaming</h1>
+            <p>Watch live cricket matches from around the world with premium streaming quality and no interruptions.</p>
+            
+            <div class="player-container">
+                <div id="video-player">
+                    <div class="player-placeholder">
+                        <img src="https://i.ibb.co/N6kHcDRm/1758309747267801-ACC-SLvs-BAN-S4-tonight-20sep-preview-landscape-thumb.webp" alt="Cricket Match Preview" class="thumbnail-image">
+                        <div class="thumbnail-overlay">
+                            <div class="placeholder-content">
+                                <button class="watch-live-btn" id="watch-live-btn">
+                                    <i class="fas fa-play-circle"></i> WATCH LIVE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spinner" id="loading-spinner"></div>
+                <div class="hd-badge">
+                    <i class="fas fa-hd"></i> HD
+                </div>
+                <div class="live-badge">
+                    <i class="fas fa-circle"></i> LIVE
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-secondary" id="reload-btn">
+                    <i class="fas fa-redo"></i> Reload Stream
+                </button>
+            </div>
+            
+            <div class="server-status" id="server-status">
+                <div class="status-dot" id="status-dot"></div>
+                <span id="status-text">Click WATCH LIVE to start streaming</span>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Premium Streaming Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hd"></i>
+                    </div>
+                    <h3>Ultra HD Quality</h3>
+                    <p>Enjoy crystal clear 4K streaming with adaptive bitrate technology</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Low Latency</h3>
+                    <p>Real-time streaming with minimal delay for live action</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Connection</h3>
+                    <p>Encrypted streams for your privacy and security</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Multi-Device</h3>
+                    <p>Watch on your phone, tablet, or computer seamlessly</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Social Media Share Buttons -->
+    <div class="share-components">
+        <div class="share-btn whatsapp" id="whatsapp-share">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="share-btn telegram" id="telegram-share">
+            <i class="fab fa-telegram"></i>
+        </div>
+        <div class="share-btn copy" id="copy-link">
+            <i class="fas fa-link"></i>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Cricket Live Streaming. All rights reserved.</p>
+        <p class="developer">Website Developed By Murli Kumar</p>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // DOM Elements
+        const themeToggle = document.getElementById('theme-toggle');
+        const statusDot = document.getElementById('status-dot');
+        const statusText = document.getElementById('status-text');
+        const toast = document.getElementById('toast');
+        const devtoolsWarning = document.getElementById('devtools-warning');
+        const reloadBtn = document.getElementById('reload-btn');
+        const watchLiveBtn = document.getElementById('watch-live-btn');
+        let spinner = document.getElementById('loading-spinner');
+        
+        // Video URL
+        const VIDEO_URL = "https://livecfdai-mp.slivcdn.com/out/v1/eee8ba24cb91405081f3263a292e12b9/std_mdd-600300010_6.m3u8?hdntl=exp=1758336016~acl=*~hmac=75de8d0f3d916747a0f783313f6ff01e53b388ab48e40e80bfafaec2e8bbca42&originpath=/linear/hls/pb/event/KqsXcdR0Ta2-bgmQzgV55A/stream/bc291388-3bc6-4d6a-b99d-2688ba258cd2:SIN/variant/ef4080ebd5ace5d0938c52f61db14450/bandwidth/813120.m3u8";
+        
+        // Developer tools detection
+        function detectDevTools() {
+            const widthThreshold = window.outerWidth - window.innerWidth > 100;
+            const heightThreshold = window.outerHeight - window.innerHeight > 100;
+            
+            if (!(widthThreshold || heightThreshold)) {
+                devtoolsWarning.style.display = 'none';
+                document.body.style.overflow = 'auto';
+                return false;
+            }
+            
+            // Show warning and block interaction
+            devtoolsWarning.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            return true;
+        }
+        
+        // Check for devtools periodically
+        setInterval(detectDevTools, 1000);
+        
+        // Disable right-click menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            showToast('Right-click is disabled on this page', 'error');
+        });
+        
+        // Disable keyboard shortcuts for devtools
+        document.addEventListener('keydown', function(e) {
+            // Disable F12
+            if (e.key === 'F12') {
+                e.preventDefault();
+                showToast('Developer tools are disabled on this page', 'error');
+            }
+            
+            // Disable Ctrl+Shift+I
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                showToast('Developer tools are disabled on this page', 'error');
+            }
+            
+            // Disable Ctrl+Shift+J
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                showToast('Developer tools are disabled on this page', 'error');
+            }
+            
+            // Disable Ctrl+U
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                showToast('Viewing page source is disabled', 'error');
+            }
+        });
+        
+        // Update server status
+        function updateServerStatus(status, text) {
+            statusDot.className = 'status-dot ' + status;
+            statusText.textContent = text;
+        }
+        
+        // Show toast message
+        function showToast(message, type = '') {
+            toast.textContent = message;
+            toast.className = 'toast ' + type;
+            toast.style.display = 'block';
+            
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+        
+        // Show loading spinner
+        function showLoadingSpinner(show) {
+            spinner.style.display = show ? 'block' : 'none';
+        }
+        
+        // Play video function
+        function playVideo() {
+            // Hide the watch live button
+            watchLiveBtn.style.display = 'none';
+            
+            showLoadingSpinner(true);
+            updateServerStatus('connecting', 'Connecting to SonyLIV server...');
+            
+            // Create video element
+            const playerContainer = document.getElementById('video-player');
+            playerContainer.innerHTML = `
+                <video id="main-video" controls autoplay style="width: 100%; height: 100%;">
+                    <source src="${VIDEO_URL}" type="application/x-mpegURL">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+            
+            const video = document.getElementById('main-video');
+            
+            video.addEventListener('canplay', () => {
+                showLoadingSpinner(false);
+                updateServerStatus('connected', 'Connected to SonyLIV server');
+                video.play().catch(e => {
+                    showToast('Autoplay blocked. Click play to start video.', 'error');
+                });
+            });
+            
+            video.addEventListener('error', () => {
+                showLoadingSpinner(false);
+                updateServerStatus('error', 'Connection failed');
+                showToast('Error loading video. Please try again.', 'error');
+                // Show the watch live button again if there's an error
+                watchLiveBtn.style.display = 'flex';
+            });
+        }
+        
+        // Reload video function
+        function reloadVideo() {
+            playVideo();
+            showToast('Reloading stream...');
+        }
+        
+        // Toggle theme function
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const icon = themeToggle.querySelector('i');
+            
+            if (document.body.classList.contains('light-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'light');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        
+        // Initialize theme from localStorage
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const icon = themeToggle.querySelector('i');
+            
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                document.body.classList.remove('light-mode');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+        
+        // Share on social media
+        function shareOnPlatform(platform) {
+            const pageUrl = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Watch live cricket streaming on Cricket Live!');
+            let shareUrl = '';
+            
+            switch(platform) {
+                case 'whatsapp':
+                    shareUrl = `https://api.whatsapp.com/send?text=${text}%20${pageUrl}`;
+                    break;
+                case 'telegram':
+                    shareUrl = `https://t.me/share/url?url=${pageUrl}&text=${text}`;
+                    break;
+                case 'copy':
+                    navigator.clipboard.writeText(window.location.href).then(() => {
+                        showToast('Link copied to clipboard!');
+                    }).catch(err => {
+                        // Fallback method for copying
+                        const tempInput = document.createElement('input');
+                        tempInput.value = window.location.href;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+                        showToast('Link copied to clipboard!');
+                    });
+                    return;
+            }
+            
+            if (shareUrl) {
+                window.open(shareUrl, '_blank');
+            }
+        }
+        
+        // Event Listeners
+        reloadBtn.addEventListener('click', reloadVideo);
+        watchLiveBtn.addEventListener('click', playVideo);
+        
+        // Theme toggle functionality
+        themeToggle.addEventListener('click', toggleTheme);
+        
+        // Social media share buttons
+        document.getElementById('whatsapp-share').addEventListener('click', () => shareOnPlatform('whatsapp'));
+        document.getElementById('telegram-share').addEventListener('click', () => shareOnPlatform('telegram'));
+        document.getElementById('copy-link').addEventListener('click', () => shareOnPlatform('copy'));
+        
+        // Initialize
+        initTheme();
+        
+        // Initial devtools check
+        detectDevTools();
+    </script>
+</body>
+</html>
