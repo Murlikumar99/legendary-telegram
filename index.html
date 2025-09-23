@@ -219,6 +219,7 @@
             padding: 15px;
             display: none;
             z-index: 10;
+            transition: opacity 0.3s;
         }
 
         .player-container:hover .video-controls {
@@ -239,8 +240,9 @@
             height: 100%;
             background: var(--primary);
             border-radius: 10px;
-            width: 35%;
+            width: 0%;
             position: relative;
+            transition: width 0.1s;
         }
 
         .timeline::after {
@@ -254,6 +256,12 @@
             background: white;
             border-radius: 50%;
             box-shadow: 0 0 5px rgba(0,0,0,0.5);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .timeline-container:hover .timeline::after {
+            opacity: 1;
         }
 
         .controls-bar {
@@ -574,6 +582,70 @@
                 right: 15px;
             }
         }
+
+        /* Modal styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: var(--shadow);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .close-modal {
+            background: transparent;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .modal-list {
+            list-style: none;
+        }
+
+        .modal-item {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-item:last-child {
+            border-bottom: none;
+        }
+
+        .modal-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
@@ -609,7 +681,7 @@
                     
                     <!-- Video Controls -->
                     <div class="video-controls">
-                        <div class="timeline-container">
+                        <div class="timeline-container" id="timeline-container">
                             <div class="timeline" id="progress-bar"></div>
                         </div>
                         <div class="controls-bar">
@@ -618,7 +690,7 @@
                                     <i class="fas fa-play"></i>
                                 </button>
                                 <div class="time-display">
-                                    <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+                                    <span id="current-time">00:00</span> / <span id="duration">01:00:00</span>
                                 </div>
                             </div>
                             <div class="right-controls">
@@ -703,33 +775,33 @@
     </div>
 
     <!-- Help Modal -->
-    <div class="modal" id="help-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center;">
-        <div style="background: var(--bg-card); border-radius: var(--radius); padding: 30px; max-width: 500px; width: 90%;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h2 style="color: var(--primary);">Player Controls Guide</h2>
-                <button id="close-help" style="background: transparent; border: none; color: var(--text-light); font-size: 1.5rem; cursor: pointer;">
+    <div class="modal" id="help-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Player Controls Guide</h2>
+                <button class="close-modal" id="close-help">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <ul style="list-style: none;">
-                <li style="padding: 10px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-play" style="color: var(--primary);"></i>
+            <ul class="modal-list">
+                <li class="modal-item">
+                    <i class="fas fa-play modal-icon"></i>
                     <span>Play/Pause: Click to start or pause the stream</span>
                 </li>
-                <li style="padding: 10px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-sliders-h" style="color: var(--primary);"></i>
+                <li class="modal-item">
+                    <i class="fas fa-sliders-h modal-icon"></i>
                     <span>Quality: Adjust video quality (Auto, 720p, 1080p, 4K)</span>
                 </li>
-                <li style="padding: 10px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-volume-up" style="color: var(--primary);"></i>
+                <li class="modal-item">
+                    <i class="fas fa-volume-up modal-icon"></i>
                     <span>Volume: Control audio volume</span>
                 </li>
-                <li style="padding: 10px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-expand" style="color: var(--primary);"></i>
+                <li class="modal-item">
+                    <i class="fas fa-expand modal-icon"></i>
                     <span>Fullscreen: Toggle fullscreen mode</span>
                 </li>
-                <li style="padding: 10px 0; display: flex; align-items: center; gap: 10px;">
-                    <i class="fas fa-redo" style="color: var(--primary);"></i>
+                <li class="modal-item">
+                    <i class="fas fa-redo modal-icon"></i>
                     <span>Reload: Restart the stream if needed</span>
                 </li>
             </ul>
@@ -780,6 +852,7 @@
         const currentQuality = document.getElementById('current-quality');
         const qualityOptions = document.querySelectorAll('.quality-option');
         const playerContainer = document.querySelector('.player-container');
+        const timelineContainer = document.getElementById('timeline-container');
 
         // Video state
         let isPlaying = false;
@@ -788,12 +861,19 @@
         let isFullscreen = false;
         let currentTime = 0;
         let totalDuration = 3600; // 1 hour in seconds for demo
+        let timeUpdateInterval;
 
-        // Format time in MM:SS
+        // Format time in MM:SS or HH:MM:SS
         function formatTime(seconds) {
-            const mins = Math.floor(seconds / 60);
+            const hrs = Math.floor(seconds / 3600);
+            const mins = Math.floor((seconds % 3600) / 60);
             const secs = Math.floor(seconds % 60);
-            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            
+            if (hrs > 0) {
+                return `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            } else {
+                return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            }
         }
 
         // Update video timeline
@@ -805,6 +885,24 @@
             durationEl.textContent = formatTime(totalDuration);
         }
 
+        // Start time progression
+        function startTimeProgression() {
+            if (timeUpdateInterval) clearInterval(timeUpdateInterval);
+            
+            timeUpdateInterval = setInterval(() => {
+                if (isPlaying && currentTime < totalDuration) {
+                    currentTime += 1;
+                    updateTimeline();
+                } else if (currentTime >= totalDuration) {
+                    // Video ended
+                    isPlaying = false;
+                    playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                    clearInterval(timeUpdateInterval);
+                    showToast('Stream ended');
+                }
+            }, 1000);
+        }
+
         // Toggle play/pause
         function togglePlayPause() {
             isPlaying = !isPlaying;
@@ -812,18 +910,13 @@
             if (isPlaying) {
                 playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
                 statusText.textContent = 'Streaming live cricket match';
-                // Simulate time progression for demo
-                if (currentTime < totalDuration) {
-                    setInterval(() => {
-                        if (isPlaying && currentTime < totalDuration) {
-                            currentTime += 1;
-                            updateTimeline();
-                        }
-                    }, 1000);
-                }
+                startTimeProgression();
+                showToast('Stream started');
             } else {
                 playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
                 statusText.textContent = 'Stream paused';
+                clearInterval(timeUpdateInterval);
+                showToast('Stream paused');
             }
         }
 
@@ -853,6 +946,7 @@
                     playerContainer.msRequestFullscreen();
                 }
                 fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i>';
+                showToast('Fullscreen mode enabled');
             } else {
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
@@ -862,6 +956,7 @@
                     document.msExitFullscreen();
                 }
                 fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
+                showToast('Fullscreen mode disabled');
             }
         }
 
@@ -931,6 +1026,10 @@
                 showLoadingSpinner(true);
                 updateServerStatus('connecting', 'Reconnecting to streaming server...');
                 
+                // Reset time
+                currentTime = 0;
+                updateTimeline();
+                
                 // Simulate reconnection
                 setTimeout(() => {
                     showLoadingSpinner(false);
@@ -974,11 +1073,11 @@
             helpModal.style.display = helpModal.style.display === 'flex' ? 'none' : 'flex';
         }
 
-        // Timeline click event
-        document.querySelector('.timeline-container').addEventListener('click', (e) => {
-            const rect = e.target.getBoundingClientRect();
+        // Timeline click event - fixed to work properly
+        timelineContainer.addEventListener('click', (e) => {
+            const rect = timelineContainer.getBoundingClientRect();
             const percent = (e.clientX - rect.left) / rect.width;
-            currentTime = percent * totalDuration;
+            currentTime = Math.max(0, Math.min(totalDuration, percent * totalDuration));
             updateTimeline();
             showToast(`Seek to ${formatTime(currentTime)}`);
         });
@@ -993,7 +1092,8 @@
         fullscreenBtn.addEventListener('click', toggleFullscreen);
         
         // Quality selector
-        qualityBtn.addEventListener('click', () => {
+        qualityBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             qualityMenu.classList.toggle('active');
         });
 
@@ -1015,6 +1115,12 @@
             if (!qualityBtn.contains(e.target) && !qualityMenu.contains(e.target)) {
                 qualityMenu.classList.remove('active');
             }
+        });
+
+        // Handle fullscreen change events
+        document.addEventListener('fullscreenchange', () => {
+            isFullscreen = !!document.fullscreenElement;
+            fullscreenBtn.innerHTML = isFullscreen ? '<i class="fas fa-compress"></i>' : '<i class="fas fa-expand"></i>';
         });
 
         // Initialize timeline
