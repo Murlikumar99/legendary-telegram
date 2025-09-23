@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
@@ -304,6 +304,150 @@
             font-weight: 700;
         }
 
+        /* Enhanced Video Player Controls */
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+            padding: 15px;
+            display: none;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .player-container:hover .video-controls {
+            display: block;
+        }
+
+        .timeline-container {
+            width: 100%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .timeline {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 10px;
+            width: 0%;
+            position: relative;
+            transition: width 0.1s linear;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .timeline-container:hover .timeline::after {
+            opacity: 1;
+        }
+
+        .controls-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .left-controls, .right-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .control-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.1);
+        }
+
+        .time-display {
+            font-size: 0.9rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        .quality-selector {
+            position: relative;
+        }
+
+        .quality-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+        }
+
+        .quality-menu {
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: var(--bg-card);
+            border-radius: 8px;
+            padding: 10px;
+            min-width: 120px;
+            box-shadow: var(--shadow);
+            display: none;
+            z-index: 20;
+        }
+
+        .quality-menu.active {
+            display: block;
+        }
+
+        .quality-option {
+            display: block;
+            width: 100%;
+            padding: 8px 12px;
+            background: transparent;
+            border: none;
+            color: var(--text-light);
+            text-align: left;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .quality-option:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .quality-option.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .fullscreen-btn {
+            margin-left: 10px;
+        }
+
         /* Features Section */
         .features {
             margin: 60px 0;
@@ -501,6 +645,16 @@
                 bottom: 70px;
                 right: 15px;
             }
+            
+            .controls-bar {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .left-controls, .right-controls {
+                width: 100%;
+                justify-content: space-between;
+            }
         }
 
         @media (max-width: 480px) {
@@ -532,6 +686,14 @@
                 width: 45px;
                 height: 45px;
                 font-size: 1rem;
+            }
+            
+            .control-btn {
+                font-size: 1rem;
+            }
+            
+            .time-display {
+                font-size: 0.8rem;
             }
         }
 
@@ -698,6 +860,71 @@
         .watch-live-btn i {
             font-size: 1.5rem;
         }
+        
+        /* Help Modal */
+        .help-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .help-content {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 30px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: var(--shadow);
+        }
+        
+        .help-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .help-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .close-help {
+            background: transparent;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .help-list {
+            list-style: none;
+        }
+        
+        .help-item {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .help-item:last-child {
+            border-bottom: none;
+        }
+        
+        .help-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
@@ -724,6 +951,9 @@
                 <button class="btn btn-icon btn-secondary" id="theme-toggle">
                     <i class="fas fa-moon"></i>
                 </button>
+                <button class="btn btn-secondary" id="help-btn">
+                    <i class="fas fa-question-circle"></i> Help
+                </button>
             </div>
         </header>
 
@@ -734,7 +964,7 @@
             <div class="player-container">
                 <div id="video-player">
                     <div class="player-placeholder">
-                        <img src="https://i.ibb.co/N6kHcDRm/1758309747267801-ACC-SLvs-BAN-S4-tonight-20sep-preview-landscape-thumb.webp" alt="Cricket Match Preview" class="thumbnail-image">
+                        <img src="https://i.ibb.co/7dYKyLPH/1758502680733236-ACC25-super-four-PAK-vs-SL-22sep-dated-preview-landscape-thumb.webp" alt="Cricket Match Preview" class="thumbnail-image">
                         <div class="thumbnail-overlay">
                             <div class="placeholder-content">
                                 <button class="watch-live-btn" id="watch-live-btn">
@@ -744,6 +974,43 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Enhanced Video Controls -->
+                <div class="video-controls">
+                    <div class="timeline-container">
+                        <div class="timeline" id="progress-bar"></div>
+                    </div>
+                    <div class="controls-bar">
+                        <div class="left-controls">
+                            <button class="control-btn" id="play-pause-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="time-display">
+                                <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+                            </div>
+                        </div>
+                        <div class="right-controls">
+                            <div class="quality-selector">
+                                <button class="control-btn quality-btn" id="quality-btn">
+                                    <i class="fas fa-cog"></i> <span id="current-quality">Auto</span>
+                                </button>
+                                <div class="quality-menu" id="quality-menu">
+                                    <button class="quality-option active" data-quality="auto">Auto</button>
+                                    <button class="quality-option" data-quality="720p">720p HD</button>
+                                    <button class="quality-option" data-quality="1080p">1080p FHD</button>
+                                    <button class="quality-option" data-quality="4k">4K UHD</button>
+                                </div>
+                            </div>
+                            <button class="control-btn" id="volume-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <button class="control-btn fullscreen-btn" id="fullscreen-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="spinner" id="loading-spinner"></div>
                 <div class="hd-badge">
                     <i class="fas fa-hd"></i> HD
@@ -803,6 +1070,40 @@
         </section>
     </div>
 
+    <!-- Help Modal -->
+    <div class="help-modal" id="help-modal">
+        <div class="help-content">
+            <div class="help-header">
+                <h2 class="help-title">Player Controls Guide</h2>
+                <button class="close-help" id="close-help">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="help-list">
+                <li class="help-item">
+                    <i class="fas fa-play help-icon"></i>
+                    <span>Play/Pause: Click to start or pause the stream</span>
+                </li>
+                <li class="help-item">
+                    <i class="fas fa-sliders-h help-icon"></i>
+                    <span>Quality: Adjust video quality (Auto, 720p, 1080p, 4K)</span>
+                </li>
+                <li class="help-item">
+                    <i class="fas fa-volume-up help-icon"></i>
+                    <span>Volume: Control audio volume</span>
+                </li>
+                <li class="help-item">
+                    <i class="fas fa-expand help-icon"></i>
+                    <span>Fullscreen: Toggle fullscreen mode</span>
+                </li>
+                <li class="help-item">
+                    <i class="fas fa-redo help-icon"></i>
+                    <span>Reload: Restart the stream if needed</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <!-- Social Media Share Buttons -->
     <div class="share-components">
         <div class="share-btn whatsapp" id="whatsapp-share">
@@ -832,10 +1133,31 @@
         const devtoolsWarning = document.getElementById('devtools-warning');
         const reloadBtn = document.getElementById('reload-btn');
         const watchLiveBtn = document.getElementById('watch-live-btn');
+        const helpBtn = document.getElementById('help-btn');
+        const helpModal = document.getElementById('help-modal');
+        const closeHelp = document.getElementById('close-help');
         let spinner = document.getElementById('loading-spinner');
         
+        // Video Controls Elements
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        const volumeBtn = document.getElementById('volume-btn');
+        const fullscreenBtn = document.getElementById('fullscreen-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const currentTimeEl = document.getElementById('current-time');
+        const durationEl = document.getElementById('duration');
+        const qualityBtn = document.getElementById('quality-btn');
+        const qualityMenu = document.getElementById('quality-menu');
+        const currentQuality = document.getElementById('current-quality');
+        const qualityOptions = document.querySelectorAll('.quality-option');
+        
         // Video URL
-        const VIDEO_URL = "https://livecfdai-mp.slivcdn.com/out/v1/eee8ba24cb91405081f3263a292e12b9/std_mdd-600300010_6.m3u8?hdntl=exp=1758336016~acl=*~hmac=75de8d0f3d916747a0f783313f6ff01e53b388ab48e40e80bfafaec2e8bbca42&originpath=/linear/hls/pb/event/KqsXcdR0Ta2-bgmQzgV55A/stream/bc291388-3bc6-4d6a-b99d-2688ba258cd2:SIN/variant/ef4080ebd5ace5d0938c52f61db14450/bandwidth/813120.m3u8";
+        const VIDEO_URL = " https://d274dp7v20n4nf.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4414993/175034844671898752407/index_4.m3u8";
+        
+        // Video state
+        let videoPlayer = null;
+        let isPlaying = false;
+        let isMuted = false;
+        let currentVolume = 1;
         
         // Developer tools detection
         function detectDevTools() {
@@ -912,6 +1234,101 @@
             spinner.style.display = show ? 'block' : 'none';
         }
         
+        // Format time in MM:SS
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        // Update video timeline
+        function updateTimeline() {
+            if (!videoPlayer) return;
+            
+            const progress = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+            progressBar.style.width = `${progress}%`;
+            
+            currentTimeEl.textContent = formatTime(videoPlayer.currentTime);
+            
+            if (videoPlayer.duration) {
+                durationEl.textContent = formatTime(videoPlayer.duration);
+            }
+        }
+        
+        // Toggle play/pause
+        function togglePlayPause() {
+            if (!videoPlayer) return;
+            
+            if (isPlaying) {
+                videoPlayer.pause();
+                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                isPlaying = false;
+            } else {
+                videoPlayer.play().then(() => {
+                    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                    isPlaying = true;
+                }).catch(e => {
+                    showToast('Unable to play video. Please try again.', 'error');
+                });
+            }
+        }
+        
+        // Toggle mute
+        function toggleMute() {
+            if (!videoPlayer) return;
+            
+            isMuted = !isMuted;
+            videoPlayer.muted = isMuted;
+            
+            if (isMuted) {
+                volumeBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+            } else {
+                volumeBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+            }
+        }
+        
+        // Toggle fullscreen
+        function toggleFullscreen() {
+            const playerContainer = document.querySelector('.player-container');
+            
+            if (!document.fullscreenElement) {
+                if (playerContainer.requestFullscreen) {
+                    playerContainer.requestFullscreen();
+                } else if (playerContainer.webkitRequestFullscreen) {
+                    playerContainer.webkitRequestFullscreen();
+                } else if (playerContainer.msRequestFullscreen) {
+                    playerContainer.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        }
+        
+        // Change quality
+        function changeQuality(quality) {
+            currentQuality.textContent = quality;
+            
+            // Update active quality option
+            qualityOptions.forEach(option => {
+                if (option.dataset.quality === quality) {
+                    option.classList.add('active');
+                } else {
+                    option.classList.remove('active');
+                }
+            });
+            
+            showToast(`Video quality set to ${quality}`);
+            
+            // In a real implementation, this would change the video source
+            // For this demo, we'll just show a toast message
+        }
+        
         // Play video function
         function playVideo() {
             // Hide the watch live button
@@ -923,34 +1340,113 @@
             // Create video element
             const playerContainer = document.getElementById('video-player');
             playerContainer.innerHTML = `
-                <video id="main-video" controls autoplay style="width: 100%; height: 100%;">
+                <video id="main-video" style="width: 100%; height: 100%;">
                     <source src="${VIDEO_URL}" type="application/x-mpegURL">
                     Your browser does not support the video tag.
                 </video>
+                <div class="video-controls">
+                    <div class="timeline-container">
+                        <div class="timeline" id="progress-bar"></div>
+                    </div>
+                    <div class="controls-bar">
+                        <div class="left-controls">
+                            <button class="control-btn" id="play-pause-btn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="time-display">
+                                <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+                            </div>
+                        </div>
+                        <div class="right-controls">
+                            <div class="quality-selector">
+                                <button class="control-btn quality-btn" id="quality-btn">
+                                    <i class="fas fa-cog"></i> <span id="current-quality">Auto</span>
+                                </button>
+                                <div class="quality-menu" id="quality-menu">
+                                    <button class="quality-option active" data-quality="auto">Auto</button>
+                                    <button class="quality-option" data-quality="720p">720p HD</button>
+                                    <button class="quality-option" data-quality="1080p">1080p FHD</button>
+                                    <button class="quality-option" data-quality="4k">4K UHD</button>
+                                </div>
+                            </div>
+                            <button class="control-btn" id="volume-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <button class="control-btn fullscreen-btn" id="fullscreen-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             `;
             
-            const video = document.getElementById('main-video');
+            videoPlayer = document.getElementById('main-video');
             
-            video.addEventListener('canplay', () => {
-                showLoadingSpinner(false);
-                updateServerStatus('connected', 'Connected to SonyLIV server');
-                video.play().catch(e => {
-                    showToast('Autoplay blocked. Click play to start video.', 'error');
+            // Re-attach event listeners to the new video controls
+            document.getElementById('play-pause-btn').addEventListener('click', togglePlayPause);
+            document.getElementById('volume-btn').addEventListener('click', toggleMute);
+            document.getElementById('fullscreen-btn').addEventListener('click', toggleFullscreen);
+            document.getElementById('quality-btn').addEventListener('click', () => {
+                qualityMenu.classList.toggle('active');
+            });
+            
+            // Add event listeners to quality options
+            document.querySelectorAll('.quality-option').forEach(option => {
+                option.addEventListener('click', () => {
+                    changeQuality(option.dataset.quality);
+                    qualityMenu.classList.remove('active');
                 });
             });
             
-            video.addEventListener('error', () => {
+            // Timeline click event
+            document.querySelector('.timeline-container').addEventListener('click', (e) => {
+                if (!videoPlayer) return;
+                
+                const rect = e.target.getBoundingClientRect();
+                const percent = (e.clientX - rect.left) / rect.width;
+                videoPlayer.currentTime = percent * videoPlayer.duration;
+            });
+            
+            // Video event listeners
+            videoPlayer.addEventListener('canplay', () => {
+                showLoadingSpinner(false);
+                updateServerStatus('connected', 'Connected to SonyLIV server');
+                
+                // Show video controls
+                document.querySelector('.video-controls').style.display = 'block';
+                
+                // Start playing
+                togglePlayPause();
+            });
+            
+            videoPlayer.addEventListener('timeupdate', updateTimeline);
+            
+            videoPlayer.addEventListener('error', () => {
                 showLoadingSpinner(false);
                 updateServerStatus('error', 'Connection failed');
                 showToast('Error loading video. Please try again.', 'error');
                 // Show the watch live button again if there's an error
                 watchLiveBtn.style.display = 'flex';
             });
+            
+            // Close quality menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!qualityBtn.contains(e.target) && !qualityMenu.contains(e.target)) {
+                    qualityMenu.classList.remove('active');
+                }
+            });
         }
         
         // Reload video function
         function reloadVideo() {
-            playVideo();
+            if (videoPlayer) {
+                videoPlayer.currentTime = 0;
+                videoPlayer.play().catch(e => {
+                    showToast('Error reloading video', 'error');
+                });
+            } else {
+                playVideo();
+            }
             showToast('Reloading stream...');
         }
         
@@ -1020,9 +1516,16 @@
             }
         }
         
+        // Show/hide help modal
+        function toggleHelpModal() {
+            helpModal.style.display = helpModal.style.display === 'flex' ? 'none' : 'flex';
+        }
+        
         // Event Listeners
         reloadBtn.addEventListener('click', reloadVideo);
         watchLiveBtn.addEventListener('click', playVideo);
+        helpBtn.addEventListener('click', toggleHelpModal);
+        closeHelp.addEventListener('click', toggleHelpModal);
         
         // Theme toggle functionality
         themeToggle.addEventListener('click', toggleTheme);
