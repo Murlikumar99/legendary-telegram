@@ -1,133 +1,53 @@
  <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket Live - Premium HD Streaming | Watch Live Matches</title>
-    <meta name="description" content="Watch live cricket matches in HD quality with no interruptions. Premium streaming service with real-time coverage of international cricket tournaments.">
-    <meta name="keywords" content="cricket live streaming, watch cricket online, live sports, cricket matches, HD streaming">
-    <meta name="author" content="Murli Kumar">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://cricket-live-stream.com">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Cricket Live - Premium HD Streaming | Watch Live Matches">
-    <meta property="og:description" content="Watch live cricket matches in HD quality with no interruptions. Real-time coverage of international tournaments.">
-    <meta property="og:image" content="https://i.supaimg.com/7d56b2f0-9813-4f3f-b5e1-a6239d5bf886.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://cricket-live-stream.com">
-    <meta property="og:site_name" content="Cricket Live Streaming">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@CricketLive">
-    <meta name="twitter:creator" content="@MurliKumar">
-    <meta name="twitter:title" content="Cricket Live - Premium HD Streaming">
-    <meta name="twitter:description" content="Watch live cricket matches in HD quality with no interruptions.">
-    <meta name="twitter:image" content="https://i.supaimg.com/7d56b2f0-9813-4f3f-b5e1-a6239d5bf886.jpg">
-    <meta name="twitter:image:alt" content="Cricket Live Streaming Logo">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Cricket Live Streaming",
-      "url": "https://cricket-live-stream.com",
-      "description": "Premium live cricket streaming service with HD quality and real-time coverage",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Cricket Live",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://i.supaimg.com/7d56b2f0-9813-4f3f-b5e1-a6239d5bf886.jpg"
-        }
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://cricket-live-stream.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Cricket Live - Premium HD Streaming</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         :root {
             --primary: #2563EB;
             --primary-dark: #1D4ED8;
             --primary-light: #93C5FD;
-            --primary-glow: 0 0 10px rgba(37, 99, 235, 0.7), 0 0 20px rgba(37, 99, 235, 0.4);
             --secondary: #DC2626;
-            --secondary-glow: 0 0 10px rgba(220, 38, 38, 0.5);
-            --live-indicator: #DC2626;
-            --live-glow: 0 0 10px rgba(220, 38, 38, 0.7);
             --bg-dark: #0F172A;
             --bg-darker: #0A1128;
             --bg-card: #1E293B;
             --text-light: #FFFFFF;
             --text-muted: #CBD5E1;
             --border-light: rgba(37, 99, 235, 0.3);
-            --border-dark: rgba(37, 99, 235, 0.1);
             --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             --radius: 16px;
         }
 
-        .light-mode {
-            --primary: #2563EB;
-            --primary-dark: #1D4ED8;
-            --primary-light: #93C5FD;
-            --primary-glow: 0 0 10px rgba(37, 99, 235, 0.5);
-            --secondary: #DC2626;
-            --secondary-glow: 0 0 10px rgba(220, 38, 38, 0.3);
-            --live-indicator: #DC2626;
-            --bg-dark: #f0f2f5;
-            --bg-darker: #e4e6ef;
-            --bg-card: #ffffff;
-            --text-light: #1E293B;
-            --text-muted: #64748B;
-            --border-light: rgba(37, 99, 235, 0.2);
-            --border-dark: rgba(37, 99, 235, 0.1);
-            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
             color: var(--text-light);
-            line-height: 1.6;
             min-height: 100vh;
             padding: 20px;
-            transition: background 0.3s ease, color 0.3s ease;
             overflow-x: hidden;
         }
 
         .container {
-            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Header Styles */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 0;
             margin-bottom: 30px;
-            border-bottom: 1px solid var(--border-dark);
+            border-bottom: 1px solid var(--border-light);
         }
 
         .logo-container {
@@ -140,24 +60,19 @@
             height: 50px;
             width: 50px;
             border-radius: 10px;
+            background: var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-            box-shadow: var(--primary-glow);
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.7);
         }
 
         .logo-text {
             font-size: 24px;
             font-weight: 800;
             color: var(--primary);
-            text-shadow: var(--primary-glow);
         }
 
         .header-actions {
@@ -176,26 +91,17 @@
             justify-content: center;
             gap: 8px;
             transition: all 0.3s ease;
-            box-shadow: var(--shadow);
-        }
-
-        .btn-icon {
-            width: 40px;
-            height: 40px;
-            padding: 0;
-            border-radius: 50%;
         }
 
         .btn-primary {
             background-color: var(--primary);
             color: white;
-            box-shadow: var(--primary-glow);
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
         }
 
         .btn-primary:hover {
             background-color: var(--primary-dark);
             transform: translateY(-2px);
-            box-shadow: 0 0 15px rgba(37, 99, 235, 0.8);
         }
 
         .btn-secondary {
@@ -206,10 +112,8 @@
 
         .btn-secondary:hover {
             background-color: rgba(37, 99, 235, 0.1);
-            transform: translateY(-2px);
         }
 
-        /* Hero Section */
         .hero {
             text-align: center;
             margin-bottom: 50px;
@@ -220,7 +124,6 @@
             margin-bottom: 20px;
             font-weight: 800;
             color: var(--primary);
-            text-shadow: var(--primary-glow);
         }
 
         .hero p {
@@ -228,7 +131,6 @@
             max-width: 700px;
             margin: 0 auto 30px;
             color: var(--text-muted);
-            font-weight: 400;
         }
 
         .player-container {
@@ -247,7 +149,11 @@
         #video-player {
             width: 100%;
             height: 100%;
-            background-color: var(--bg-card);
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
 
         .player-placeholder {
@@ -257,10 +163,15 @@
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-dark) 100%);
-            color: var(--text-light);
-            font-size: 1.2rem;
             position: relative;
             overflow: hidden;
+        }
+
+        .thumbnail-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
         }
 
         .thumbnail-overlay {
@@ -276,35 +187,29 @@
             z-index: 1;
         }
 
-        .thumbnail-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .placeholder-content {
-            text-align: center;
-            z-index: 2;
-            padding: 20px;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-            justify-content: center;
-        }
-
-        .play-btn {
-            padding: 16px 30px;
-            font-size: 1.1rem;
+        .watch-live-btn {
+            padding: 16px 40px;
+            font-size: 1.3rem;
             font-weight: 700;
+            background: linear-gradient(135deg, var(--secondary) 0%, #B91C1C 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
         }
 
-        /* Enhanced Video Player Controls */
+        .watch-live-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(220, 38, 38, 0.6);
+        }
+
         .video-controls {
             position: absolute;
             bottom: 0;
@@ -313,7 +218,6 @@
             background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
             padding: 15px;
             display: none;
-            transition: all 0.3s ease;
             z-index: 10;
         }
 
@@ -326,7 +230,7 @@
             height: 5px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             cursor: pointer;
             position: relative;
         }
@@ -335,9 +239,8 @@
             height: 100%;
             background: var(--primary);
             border-radius: 10px;
-            width: 0%;
+            width: 35%;
             position: relative;
-            transition: width 0.1s linear;
         }
 
         .timeline::after {
@@ -351,12 +254,6 @@
             background: white;
             border-radius: 50%;
             box-shadow: 0 0 5px rgba(0,0,0,0.5);
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
-
-        .timeline-container:hover .timeline::after {
-            opacity: 1;
         }
 
         .controls-bar {
@@ -444,63 +341,39 @@
             font-weight: 600;
         }
 
-        .fullscreen-btn {
-            margin-left: 10px;
+        .hd-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            z-index: 5;
         }
 
-        /* Features Section */
-        .features {
-            margin: 60px 0;
+        .live-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--secondary);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            z-index: 5;
+            animation: pulse 1.5s infinite;
         }
 
-        .features h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
-            color: var(--primary);
-            text-shadow: var(--primary-glow);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .feature-card {
-            background-color: var(--bg-card);
-            border-radius: var(--radius);
-            padding: 25px 20px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 3px solid var(--primary);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-            text-shadow: var(--primary-glow);
-        }
-
-        .feature-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-            color: var(--primary);
-        }
-
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Server Status */
         .server-status {
             display: flex;
             align-items: center;
@@ -537,7 +410,118 @@
             box-shadow: 0 0 8px #EF4444;
         }
 
-        /* Loading Spinner */
+        .features {
+            margin: 60px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 3px solid var(--primary);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        footer p {
+            color: var(--text-muted);
+        }
+
+        .developer {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .share-components {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 100;
+        }
+
+        .share-btn {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-card);
+            color: var(--primary);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-size: 1.2rem;
+            border: 1px solid var(--border-light);
+        }
+
+        .share-btn:hover {
+            transform: scale(1.15);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--bg-card);
+            color: var(--text-light);
+            padding: 14px 28px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            display: none;
+            font-weight: 500;
+        }
+
         .spinner {
             width: 40px;
             height: 40px;
@@ -563,54 +547,6 @@
             100% { opacity: 1; }
         }
 
-        /* Toast */
-        .toast {
-            position: fixed;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: var(--bg-card);
-            color: var(--text-light);
-            padding: 14px 28px;
-            border-radius: 30px;
-            box-shadow: var(--shadow);
-            z-index: 1000;
-            display: none;
-            font-weight: 500;
-            border: 1px solid var(--border-light);
-        }
-
-        .toast.error {
-            background-color: rgba(244, 67, 54, 0.2);
-            border-color: rgba(244, 67, 54, 0.5);
-        }
-
-        .toast.success {
-            background-color: rgba(76, 175, 80, 0.2);
-            border-color: rgba(76, 175, 80, 0.5);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 60px;
-            border-top: 1px solid var(--border-dark);
-        }
-
-        footer p {
-            color: var(--text-muted);
-            font-weight: 400;
-        }
-
-        .developer {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: var(--primary);
-            font-weight: 500;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -624,10 +560,6 @@
                 gap: 10px;
             }
             
-            .feature-card {
-                padding: 20px 15px;
-            }
-            
             .logo {
                 height: 40px;
                 width: 40px;
@@ -637,320 +569,23 @@
                 font-size: 20px;
             }
             
-            .action-buttons {
-                flex-direction: column;
-            }
-            
             .share-components {
                 bottom: 70px;
                 right: 15px;
             }
-            
-            .controls-bar {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            
-            .left-controls, .right-controls {
-                width: 100%;
-                justify-content: space-between;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo-container {
-                flex-direction: column;
-                gap: 5px;
-                align-items: flex-start;
-            }
-            
-            .logo-text {
-                font-size: 18px;
-            }
-            
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .share-components {
-                flex-direction: row;
-                bottom: 70px;
-                right: 50%;
-                transform: translateX(50%);
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
-            }
-            
-            .share-btn {
-                width: 45px;
-                height: 45px;
-                font-size: 1rem;
-            }
-            
-            .control-btn {
-                font-size: 1rem;
-            }
-            
-            .time-display {
-                font-size: 0.8rem;
-            }
-        }
-
-        /* HD Quality Badge */
-        .hd-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            z-index: 5;
-        }
-
-        /* Live Badge */
-        .live-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--live-indicator);
-            color: white;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            z-index: 5;
-            box-shadow: var(--live-glow);
-            animation: pulse 1.5s infinite;
-        }
-
-        /* Share Components */
-        .share-components {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 100;
-        }
-
-        .share-btn {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--bg-card);
-            color: var(--primary);
-            box-shadow: var(--shadow);
-            cursor: pointer;
-            transition: transform 0.2s;
-            font-size: 1.2rem;
-            border: 1px solid var(--border-dark);
-        }
-
-        .share-btn:hover {
-            transform: scale(1.15);
-            box-shadow: var(--primary-glow);
-        }
-
-        .share-btn.whatsapp {
-            color: #25D366;
-        }
-
-        .share-btn.telegram {
-            color: #0088CC;
-        }
-
-        .share-btn.copy {
-            color: var(--primary);
-        }
-        
-        /* Developer Tools Warning */
-        .devtools-warning {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--bg-darker);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 20px;
-            display: none;
-        }
-        
-        .warning-icon {
-            font-size: 4rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-        }
-        
-        .devtools-warning h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--secondary);
-        }
-        
-        .devtools-warning p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 600px;
-            color: var(--text-light);
-        }
-
-        /* Blue theme enhancements */
-        .blue-accent {
-            color: var(--primary);
-        }
-
-        .blue-bg {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .blue-border {
-            border-color: var(--primary);
-        }
-
-        /* Watch Live Button */
-        .watch-live-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 16px 40px;
-            font-size: 1.3rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--secondary) 0%, #B91C1C 100%);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.5), 0 0 20px rgba(220, 38, 38, 0.3);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            z-index: 10;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-
-        .watch-live-btn:hover {
-            transform: translate(-50%, -50%) scale(1.05);
-            box-shadow: 0 15px 30px rgba(220, 38, 38, 0.6), 0 0 25px rgba(220, 38, 38, 0.4);
-        }
-
-        .watch-live-btn i {
-            font-size: 1.5rem;
-        }
-        
-        /* Help Modal */
-        .help-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            display: none;
-        }
-        
-        .help-content {
-            background: var(--bg-card);
-            border-radius: var(--radius);
-            padding: 30px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: var(--shadow);
-        }
-        
-        .help-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .help-title {
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
-        
-        .close-help {
-            background: transparent;
-            border: none;
-            color: var(--text-light);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        .help-list {
-            list-style: none;
-        }
-        
-        .help-item {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border-dark);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .help-item:last-child {
-            border-bottom: none;
-        }
-        
-        .help-icon {
-            color: var(--primary);
-            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
-    <div class="devtools-warning" id="devtools-warning">
-        <div class="warning-icon">
-            <i class="fas fa-exclamation-triangle"></i>
-        </div>
-        <h2>Developer Tools Detected</h2>
-        <p>This website is protected against inspection. Please close developer tools to continue using Cricket Live Streaming.</p>
-        <button class="btn btn-primary" onclick="location.reload()">
-            <i class="fas fa-redo"></i> Reload Page
-        </button>
-    </div>
-
     <div class="container">
         <header>
             <div class="logo-container">
                 <div class="logo">
-                    <img src="https://i.supaimg.com/7d56b2f0-9813-4f3f-b5e1-a6239d5bf886.jpg" alt="Cricket Live Logo">
+                    <i class="fas fa-cricket"></i>
                 </div>
                 <div class="logo-text">Cricket Live</div>
             </div>
             <div class="header-actions">
-                <button class="btn btn-icon btn-secondary" id="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
                 <button class="btn btn-secondary" id="help-btn">
                     <i class="fas fa-question-circle"></i> Help
                 </button>
@@ -964,53 +599,50 @@
             <div class="player-container">
                 <div id="video-player">
                     <div class="player-placeholder">
-                        <img src="https://i.ibb.co/7dYKyLPH/1758502680733236-ACC25-super-four-PAK-vs-SL-22sep-dated-preview-landscape-thumb.webp" alt="Cricket Match Preview" class="thumbnail-image">
+                        <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Cricket Match Preview" class="thumbnail-image">
                         <div class="thumbnail-overlay">
-                            <div class="placeholder-content">
-                                <button class="watch-live-btn" id="watch-live-btn">
-                                    <i class="fas fa-play-circle"></i> WATCH LIVE
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Enhanced Video Controls -->
-                <div class="video-controls">
-                    <div class="timeline-container">
-                        <div class="timeline" id="progress-bar"></div>
-                    </div>
-                    <div class="controls-bar">
-                        <div class="left-controls">
-                            <button class="control-btn" id="play-pause-btn">
-                                <i class="fas fa-play"></i>
+                            <button class="watch-live-btn" id="watch-live-btn">
+                                <i class="fas fa-play-circle"></i> WATCH LIVE
                             </button>
-                            <div class="time-display">
-                                <span id="current-time">00:00</span> / <span id="duration">00:00</span>
-                            </div>
                         </div>
-                        <div class="right-controls">
-                            <div class="quality-selector">
-                                <button class="control-btn quality-btn" id="quality-btn">
-                                    <i class="fas fa-cog"></i> <span id="current-quality">Auto</span>
+                    </div>
+                    
+                    <!-- Video Controls -->
+                    <div class="video-controls">
+                        <div class="timeline-container">
+                            <div class="timeline" id="progress-bar"></div>
+                        </div>
+                        <div class="controls-bar">
+                            <div class="left-controls">
+                                <button class="control-btn" id="play-pause-btn">
+                                    <i class="fas fa-play"></i>
                                 </button>
-                                <div class="quality-menu" id="quality-menu">
-                                    <button class="quality-option active" data-quality="auto">Auto</button>
-                                    <button class="quality-option" data-quality="720p">720p HD</button>
-                                    <button class="quality-option" data-quality="1080p">1080p FHD</button>
-                                    <button class="quality-option" data-quality="4k">4K UHD</button>
+                                <div class="time-display">
+                                    <span id="current-time">00:00</span> / <span id="duration">00:00</span>
                                 </div>
                             </div>
-                            <button class="control-btn" id="volume-btn">
-                                <i class="fas fa-volume-up"></i>
-                            </button>
-                            <button class="control-btn fullscreen-btn" id="fullscreen-btn">
-                                <i class="fas fa-expand"></i>
-                            </button>
+                            <div class="right-controls">
+                                <div class="quality-selector">
+                                    <button class="control-btn quality-btn" id="quality-btn">
+                                        <i class="fas fa-cog"></i> <span id="current-quality">Auto</span>
+                                    </button>
+                                    <div class="quality-menu" id="quality-menu">
+                                        <button class="quality-option active" data-quality="auto">Auto</button>
+                                        <button class="quality-option" data-quality="720p">720p HD</button>
+                                        <button class="quality-option" data-quality="1080p">1080p FHD</button>
+                                        <button class="quality-option" data-quality="4k">4K UHD</button>
+                                    </div>
+                                </div>
+                                <button class="control-btn" id="volume-btn">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                                <button class="control-btn fullscreen-btn" id="fullscreen-btn">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
                 <div class="spinner" id="loading-spinner"></div>
                 <div class="hd-badge">
                     <i class="fas fa-hd"></i> HD
@@ -1071,33 +703,33 @@
     </div>
 
     <!-- Help Modal -->
-    <div class="help-modal" id="help-modal">
-        <div class="help-content">
-            <div class="help-header">
-                <h2 class="help-title">Player Controls Guide</h2>
-                <button class="close-help" id="close-help">
+    <div class="modal" id="help-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center;">
+        <div style="background: var(--bg-card); border-radius: var(--radius); padding: 30px; max-width: 500px; width: 90%;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="color: var(--primary);">Player Controls Guide</h2>
+                <button id="close-help" style="background: transparent; border: none; color: var(--text-light); font-size: 1.5rem; cursor: pointer;">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <ul class="help-list">
-                <li class="help-item">
-                    <i class="fas fa-play help-icon"></i>
+            <ul style="list-style: none;">
+                <li style="padding: 10px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-play" style="color: var(--primary);"></i>
                     <span>Play/Pause: Click to start or pause the stream</span>
                 </li>
-                <li class="help-item">
-                    <i class="fas fa-sliders-h help-icon"></i>
+                <li style="padding: 10px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-sliders-h" style="color: var(--primary);"></i>
                     <span>Quality: Adjust video quality (Auto, 720p, 1080p, 4K)</span>
                 </li>
-                <li class="help-item">
-                    <i class="fas fa-volume-up help-icon"></i>
+                <li style="padding: 10px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-volume-up" style="color: var(--primary);"></i>
                     <span>Volume: Control audio volume</span>
                 </li>
-                <li class="help-item">
-                    <i class="fas fa-expand help-icon"></i>
+                <li style="padding: 10px 0; border-bottom: 1px solid var(--border-light); display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-expand" style="color: var(--primary);"></i>
                     <span>Fullscreen: Toggle fullscreen mode</span>
                 </li>
-                <li class="help-item">
-                    <i class="fas fa-redo help-icon"></i>
+                <li style="padding: 10px 0; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-redo" style="color: var(--primary);"></i>
                     <span>Reload: Restart the stream if needed</span>
                 </li>
             </ul>
@@ -1106,13 +738,13 @@
 
     <!-- Social Media Share Buttons -->
     <div class="share-components">
-        <div class="share-btn whatsapp" id="whatsapp-share">
+        <div class="share-btn" id="whatsapp-share">
             <i class="fab fa-whatsapp"></i>
         </div>
-        <div class="share-btn telegram" id="telegram-share">
+        <div class="share-btn" id="telegram-share">
             <i class="fab fa-telegram"></i>
         </div>
-        <div class="share-btn copy" id="copy-link">
+        <div class="share-btn" id="copy-link">
             <i class="fas fa-link"></i>
         </div>
     </div>
@@ -1126,18 +758,16 @@
 
     <script>
         // DOM Elements
-        const themeToggle = document.getElementById('theme-toggle');
+        const watchLiveBtn = document.getElementById('watch-live-btn');
+        const reloadBtn = document.getElementById('reload-btn');
+        const helpBtn = document.getElementById('help-btn');
+        const closeHelp = document.getElementById('close-help');
+        const helpModal = document.getElementById('help-modal');
         const statusDot = document.getElementById('status-dot');
         const statusText = document.getElementById('status-text');
         const toast = document.getElementById('toast');
-        const devtoolsWarning = document.getElementById('devtools-warning');
-        const reloadBtn = document.getElementById('reload-btn');
-        const watchLiveBtn = document.getElementById('watch-live-btn');
-        const helpBtn = document.getElementById('help-btn');
-        const helpModal = document.getElementById('help-modal');
-        const closeHelp = document.getElementById('close-help');
-        let spinner = document.getElementById('loading-spinner');
-        
+        const spinner = document.getElementById('loading-spinner');
+
         // Video Controls Elements
         const playPauseBtn = document.getElementById('play-pause-btn');
         const volumeBtn = document.getElementById('volume-btn');
@@ -1149,149 +779,72 @@
         const qualityMenu = document.getElementById('quality-menu');
         const currentQuality = document.getElementById('current-quality');
         const qualityOptions = document.querySelectorAll('.quality-option');
-        
-        // Video URL
-        const VIDEO_URL = " https://d274dp7v20n4nf.cloudfront.net/file_library/videos/channel_vod_non_drm_hls/4414993/175034844671898752407/index_4.m3u8";
-        
+        const playerContainer = document.querySelector('.player-container');
+
         // Video state
-        let videoPlayer = null;
         let isPlaying = false;
         let isMuted = false;
         let currentVolume = 1;
-        
-        // Developer tools detection
-        function detectDevTools() {
-            const widthThreshold = window.outerWidth - window.innerWidth > 100;
-            const heightThreshold = window.outerHeight - window.innerHeight > 100;
-            
-            if (!(widthThreshold || heightThreshold)) {
-                devtoolsWarning.style.display = 'none';
-                document.body.style.overflow = 'auto';
-                return false;
-            }
-            
-            // Show warning and block interaction
-            devtoolsWarning.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-            return true;
-        }
-        
-        // Check for devtools periodically
-        setInterval(detectDevTools, 1000);
-        
-        // Disable right-click menu
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            showToast('Right-click is disabled on this page', 'error');
-        });
-        
-        // Disable keyboard shortcuts for devtools
-        document.addEventListener('keydown', function(e) {
-            // Disable F12
-            if (e.key === 'F12') {
-                e.preventDefault();
-                showToast('Developer tools are disabled on this page', 'error');
-            }
-            
-            // Disable Ctrl+Shift+I
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                showToast('Developer tools are disabled on this page', 'error');
-            }
-            
-            // Disable Ctrl+Shift+J
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                showToast('Developer tools are disabled on this page', 'error');
-            }
-            
-            // Disable Ctrl+U
-            if (e.ctrlKey && e.key === 'u') {
-                e.preventDefault();
-                showToast('Viewing page source is disabled', 'error');
-            }
-        });
-        
-        // Update server status
-        function updateServerStatus(status, text) {
-            statusDot.className = 'status-dot ' + status;
-            statusText.textContent = text;
-        }
-        
-        // Show toast message
-        function showToast(message, type = '') {
-            toast.textContent = message;
-            toast.className = 'toast ' + type;
-            toast.style.display = 'block';
-            
-            setTimeout(() => {
-                toast.style.display = 'none';
-            }, 3000);
-        }
-        
-        // Show loading spinner
-        function showLoadingSpinner(show) {
-            spinner.style.display = show ? 'block' : 'none';
-        }
-        
+        let isFullscreen = false;
+        let currentTime = 0;
+        let totalDuration = 3600; // 1 hour in seconds for demo
+
         // Format time in MM:SS
         function formatTime(seconds) {
             const mins = Math.floor(seconds / 60);
             const secs = Math.floor(seconds % 60);
             return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
         }
-        
+
         // Update video timeline
         function updateTimeline() {
-            if (!videoPlayer) return;
-            
-            const progress = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+            const progress = (currentTime / totalDuration) * 100;
             progressBar.style.width = `${progress}%`;
             
-            currentTimeEl.textContent = formatTime(videoPlayer.currentTime);
-            
-            if (videoPlayer.duration) {
-                durationEl.textContent = formatTime(videoPlayer.duration);
-            }
+            currentTimeEl.textContent = formatTime(currentTime);
+            durationEl.textContent = formatTime(totalDuration);
         }
-        
+
         // Toggle play/pause
         function togglePlayPause() {
-            if (!videoPlayer) return;
+            isPlaying = !isPlaying;
             
             if (isPlaying) {
-                videoPlayer.pause();
-                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
-                isPlaying = false;
+                playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                statusText.textContent = 'Streaming live cricket match';
+                // Simulate time progression for demo
+                if (currentTime < totalDuration) {
+                    setInterval(() => {
+                        if (isPlaying && currentTime < totalDuration) {
+                            currentTime += 1;
+                            updateTimeline();
+                        }
+                    }, 1000);
+                }
             } else {
-                videoPlayer.play().then(() => {
-                    playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-                    isPlaying = true;
-                }).catch(e => {
-                    showToast('Unable to play video. Please try again.', 'error');
-                });
+                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                statusText.textContent = 'Stream paused';
             }
         }
-        
+
         // Toggle mute
         function toggleMute() {
-            if (!videoPlayer) return;
-            
             isMuted = !isMuted;
-            videoPlayer.muted = isMuted;
             
             if (isMuted) {
                 volumeBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                showToast('Audio muted');
             } else {
                 volumeBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+                showToast('Audio unmuted');
             }
         }
-        
+
         // Toggle fullscreen
         function toggleFullscreen() {
-            const playerContainer = document.querySelector('.player-container');
+            isFullscreen = !isFullscreen;
             
-            if (!document.fullscreenElement) {
+            if (isFullscreen) {
                 if (playerContainer.requestFullscreen) {
                     playerContainer.requestFullscreen();
                 } else if (playerContainer.webkitRequestFullscreen) {
@@ -1299,6 +852,7 @@
                 } else if (playerContainer.msRequestFullscreen) {
                     playerContainer.msRequestFullscreen();
                 }
+                fullscreenBtn.innerHTML = '<i class="fas fa-compress"></i>';
             } else {
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
@@ -1307,9 +861,10 @@
                 } else if (document.msExitFullscreen) {
                     document.msExitFullscreen();
                 }
+                fullscreenBtn.innerHTML = '<i class="fas fa-expand"></i>';
             }
         }
-        
+
         // Change quality
         function changeQuality(quality) {
             currentQuality.textContent = quality;
@@ -1324,164 +879,69 @@
             });
             
             showToast(`Video quality set to ${quality}`);
-            
-            // In a real implementation, this would change the video source
-            // For this demo, we'll just show a toast message
         }
-        
+
+        // Show toast message
+        function showToast(message) {
+            toast.textContent = message;
+            toast.style.display = 'block';
+            
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+
+        // Show loading spinner
+        function showLoadingSpinner(show) {
+            spinner.style.display = show ? 'block' : 'none';
+        }
+
+        // Update server status
+        function updateServerStatus(status, text) {
+            statusDot.className = 'status-dot ' + status;
+            statusText.textContent = text;
+        }
+
         // Play video function
         function playVideo() {
             // Hide the watch live button
             watchLiveBtn.style.display = 'none';
             
             showLoadingSpinner(true);
-            updateServerStatus('connecting', 'Connecting to SonyLIV server...');
+            updateServerStatus('connecting', 'Connecting to streaming server...');
             
-            // Create video element
-            const playerContainer = document.getElementById('video-player');
-            playerContainer.innerHTML = `
-                <video id="main-video" style="width: 100%; height: 100%;">
-                    <source src="${VIDEO_URL}" type="application/x-mpegURL">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-controls">
-                    <div class="timeline-container">
-                        <div class="timeline" id="progress-bar"></div>
-                    </div>
-                    <div class="controls-bar">
-                        <div class="left-controls">
-                            <button class="control-btn" id="play-pause-btn">
-                                <i class="fas fa-play"></i>
-                            </button>
-                            <div class="time-display">
-                                <span id="current-time">00:00</span> / <span id="duration">00:00</span>
-                            </div>
-                        </div>
-                        <div class="right-controls">
-                            <div class="quality-selector">
-                                <button class="control-btn quality-btn" id="quality-btn">
-                                    <i class="fas fa-cog"></i> <span id="current-quality">Auto</span>
-                                </button>
-                                <div class="quality-menu" id="quality-menu">
-                                    <button class="quality-option active" data-quality="auto">Auto</button>
-                                    <button class="quality-option" data-quality="720p">720p HD</button>
-                                    <button class="quality-option" data-quality="1080p">1080p FHD</button>
-                                    <button class="quality-option" data-quality="4k">4K UHD</button>
-                                </div>
-                            </div>
-                            <button class="control-btn" id="volume-btn">
-                                <i class="fas fa-volume-up"></i>
-                            </button>
-                            <button class="control-btn fullscreen-btn" id="fullscreen-btn">
-                                <i class="fas fa-expand"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            videoPlayer = document.getElementById('main-video');
-            
-            // Re-attach event listeners to the new video controls
-            document.getElementById('play-pause-btn').addEventListener('click', togglePlayPause);
-            document.getElementById('volume-btn').addEventListener('click', toggleMute);
-            document.getElementById('fullscreen-btn').addEventListener('click', toggleFullscreen);
-            document.getElementById('quality-btn').addEventListener('click', () => {
-                qualityMenu.classList.toggle('active');
-            });
-            
-            // Add event listeners to quality options
-            document.querySelectorAll('.quality-option').forEach(option => {
-                option.addEventListener('click', () => {
-                    changeQuality(option.dataset.quality);
-                    qualityMenu.classList.remove('active');
-                });
-            });
-            
-            // Timeline click event
-            document.querySelector('.timeline-container').addEventListener('click', (e) => {
-                if (!videoPlayer) return;
-                
-                const rect = e.target.getBoundingClientRect();
-                const percent = (e.clientX - rect.left) / rect.width;
-                videoPlayer.currentTime = percent * videoPlayer.duration;
-            });
-            
-            // Video event listeners
-            videoPlayer.addEventListener('canplay', () => {
+            // Simulate connection delay
+            setTimeout(() => {
                 showLoadingSpinner(false);
-                updateServerStatus('connected', 'Connected to SonyLIV server');
+                updateServerStatus('connected', 'Connected to streaming server');
                 
                 // Show video controls
                 document.querySelector('.video-controls').style.display = 'block';
                 
                 // Start playing
                 togglePlayPause();
-            });
-            
-            videoPlayer.addEventListener('timeupdate', updateTimeline);
-            
-            videoPlayer.addEventListener('error', () => {
-                showLoadingSpinner(false);
-                updateServerStatus('error', 'Connection failed');
-                showToast('Error loading video. Please try again.', 'error');
-                // Show the watch live button again if there's an error
-                watchLiveBtn.style.display = 'flex';
-            });
-            
-            // Close quality menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!qualityBtn.contains(e.target) && !qualityMenu.contains(e.target)) {
-                    qualityMenu.classList.remove('active');
-                }
-            });
+                
+                showToast('Stream started successfully');
+            }, 2000);
         }
-        
+
         // Reload video function
         function reloadVideo() {
-            if (videoPlayer) {
-                videoPlayer.currentTime = 0;
-                videoPlayer.play().catch(e => {
-                    showToast('Error reloading video', 'error');
-                });
+            if (isPlaying) {
+                showLoadingSpinner(true);
+                updateServerStatus('connecting', 'Reconnecting to streaming server...');
+                
+                // Simulate reconnection
+                setTimeout(() => {
+                    showLoadingSpinner(false);
+                    updateServerStatus('connected', 'Connected to streaming server');
+                    showToast('Stream reloaded successfully');
+                }, 1500);
             } else {
-                playVideo();
-            }
-            showToast('Reloading stream...');
-        }
-        
-        // Toggle theme function
-        function toggleTheme() {
-            document.body.classList.toggle('light-mode');
-            const icon = themeToggle.querySelector('i');
-            
-            if (document.body.classList.contains('light-mode')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'light');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-                localStorage.setItem('theme', 'dark');
+                showToast('Please start the stream first');
             }
         }
-        
-        // Initialize theme from localStorage
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const icon = themeToggle.querySelector('i');
-            
-            if (savedTheme === 'light') {
-                document.body.classList.add('light-mode');
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                document.body.classList.remove('light-mode');
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
-        }
-        
+
         // Share on social media
         function shareOnPlatform(platform) {
             const pageUrl = encodeURIComponent(window.location.href);
@@ -1499,14 +959,7 @@
                     navigator.clipboard.writeText(window.location.href).then(() => {
                         showToast('Link copied to clipboard!');
                     }).catch(err => {
-                        // Fallback method for copying
-                        const tempInput = document.createElement('input');
-                        tempInput.value = window.location.href;
-                        document.body.appendChild(tempInput);
-                        tempInput.select();
-                        document.execCommand('copy');
-                        document.body.removeChild(tempInput);
-                        showToast('Link copied to clipboard!');
+                        showToast('Failed to copy link');
                     });
                     return;
             }
@@ -1515,31 +968,57 @@
                 window.open(shareUrl, '_blank');
             }
         }
-        
+
         // Show/hide help modal
         function toggleHelpModal() {
             helpModal.style.display = helpModal.style.display === 'flex' ? 'none' : 'flex';
         }
-        
+
+        // Timeline click event
+        document.querySelector('.timeline-container').addEventListener('click', (e) => {
+            const rect = e.target.getBoundingClientRect();
+            const percent = (e.clientX - rect.left) / rect.width;
+            currentTime = percent * totalDuration;
+            updateTimeline();
+            showToast(`Seek to ${formatTime(currentTime)}`);
+        });
+
         // Event Listeners
-        reloadBtn.addEventListener('click', reloadVideo);
         watchLiveBtn.addEventListener('click', playVideo);
+        reloadBtn.addEventListener('click', reloadVideo);
         helpBtn.addEventListener('click', toggleHelpModal);
         closeHelp.addEventListener('click', toggleHelpModal);
+        playPauseBtn.addEventListener('click', togglePlayPause);
+        volumeBtn.addEventListener('click', toggleMute);
+        fullscreenBtn.addEventListener('click', toggleFullscreen);
         
-        // Theme toggle functionality
-        themeToggle.addEventListener('click', toggleTheme);
-        
+        // Quality selector
+        qualityBtn.addEventListener('click', () => {
+            qualityMenu.classList.toggle('active');
+        });
+
+        // Quality options
+        qualityOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                changeQuality(option.dataset.quality);
+                qualityMenu.classList.remove('active');
+            });
+        });
+
         // Social media share buttons
         document.getElementById('whatsapp-share').addEventListener('click', () => shareOnPlatform('whatsapp'));
         document.getElementById('telegram-share').addEventListener('click', () => shareOnPlatform('telegram'));
         document.getElementById('copy-link').addEventListener('click', () => shareOnPlatform('copy'));
-        
-        // Initialize
-        initTheme();
-        
-        // Initial devtools check
-        detectDevTools();
+
+        // Close quality menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!qualityBtn.contains(e.target) && !qualityMenu.contains(e.target)) {
+                qualityMenu.classList.remove('active');
+            }
+        });
+
+        // Initialize timeline
+        updateTimeline();
     </script>
 </body>
 </html>
